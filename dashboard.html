@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Working Time Dashboard</title>
+    <link rel="stylesheet" href="dashboraad.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="header">
+            <div class="logo">Clockify</div>
+            <div class="workspace">JEFFY'S workspace</div>
+            <button class="upgrade-btn">UPGRADE</button>
+        </div>
+        <nav class="nav-links">
+            <a href="#time-tracker" class="nav-link ">TIME TRACKER</a>
+            <a href="#calendar" class="nav-link">CALENDAR</a>
+            <a href="#dashboard" class="nav-link active">DASHBOARD</a>
+            <a href="#reports" class="nav-link">REPORTS</a>
+            <a href="#projects" class="nav-link">PROJECTS</a>
+            <a href="#team" class="nav-link">TEAM</a>
+            <a href="#clients" class="nav-link">CLIENTS</a>
+            <a href="#tags" class="nav-link">TAGS</a>
+            <a href="#show-more" class="nav-link">SHOW MORE</a>
+        </nav>
+    </div>
+    <div class="main-content">
+        <h1>Dashboard</h1>
+        <div class="summary">
+            <div>Total time: <span id="total-time">00:00:00</span></div>
+            <div>Top project: <span id="top-project">DATA</span></div>
+            <div>Top client: <span id="top-client">--</span></div>
+        </div>
+        <div class="charts">
+            <div class="chart-container">
+                <canvas id="barChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="pieChart"></canvas>
+            </div>
+        </div>
+        <div class="activity-list">
+            <h2>Most tracked activities</h2>
+            <ul id="activity-list">
+                <li>CLEANING: 00:00:06</li>
+                <li>DATA: 00:00:06</li>
+                <li>HELPING: 00:00:04</li>
+                <li>SLEEPING: 00:00:01</li>
+            </ul>
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>
